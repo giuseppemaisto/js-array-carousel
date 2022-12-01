@@ -60,10 +60,12 @@ next.addEventListener('click', function(){
    circles[itemActive].classList.add('active');
    
 });
+//CON BONUS 1
 
 prev.addEventListener('click', function(){
     //verifico l'elemento attivo (itemActive)
     //decremento il suo valore di 1
+
 
     if(itemActive == 0){
         itemActive = imagesArray.length
@@ -89,4 +91,4 @@ prev.addEventListener('click', function(){
     
 })
 
-
+//CON BONUS 2
