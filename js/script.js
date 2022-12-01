@@ -49,11 +49,14 @@ next.addEventListener('click', function(){
 
    if(itemActive == 0){
     items[imagesArray.length-1].classList.remove('active');
+    circles[imagesArray.length-1].classList.remove('active')
    }
    else{
     items[itemActive-1].classList.remove('active');
+    circles[itemActive-1].classList.remove('active');
    }
    items[itemActive].classList.add('active')
+   circles[itemActive].classList.add('active');
     //aggiungere la class active al nuovo elemento dell'array items e la vado a rimuovere da quello precedente
     //stessa cosa per i cerchi
 });
@@ -71,15 +74,18 @@ prev.addEventListener('click', function(){
 
     if(itemActive == imagesArray.length-1){
         items[0].classList.remove('active')
+        circles[0].classList.remove('active')
         
     }
 
     else{
         items[itemActive+1].classList.remove('active');
+        circles[itemActive+1].classList.remove('active');
       
     }
 
     items[itemActive].classList.add('active');
+    circles[itemActive].classList.add('active');
     
 })
 
