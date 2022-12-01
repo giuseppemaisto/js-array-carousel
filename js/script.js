@@ -61,8 +61,26 @@ next.addEventListener('click', function(){
 prev.addEventListener('click', function(){
     //verifico l'elemento attivo (itemActive)
     //decremento il suo valore di 1
+
+    if(itemActive == 0){
+        itemActive = imagesArray.length
+    }
+    itemActive--;
     //aggiungere la class active al nuovo elemento dell'array items e la vado a rimuovere da quello precedente
     //stessa cosa per i cerchi
+
+    if(itemActive == imagesArray.length-1){
+        items[0].classList.remove('active')
+        
+    }
+
+    else{
+        items[itemActive+1].classList.remove('active');
+      
+    }
+
+    items[itemActive].classList.add('active');
+    
 })
 
 
