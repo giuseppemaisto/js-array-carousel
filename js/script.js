@@ -40,7 +40,20 @@ const next = document.querySelector('.next');
 
 next.addEventListener('click', function(){
     //verifico l'elemento attivo (itemActive)
+   
     //incremento il suo valore di 1
+   itemActive++;
+   if(itemActive == imagesArray.length){
+    itemActive = 0;
+   }
+
+   if(itemActive == 0){
+    items[imagesArray.length-1].classList.remove('active');
+   }
+   else{
+    items[itemActive-1].classList.remove('active');
+   }
+   items[itemActive].classList.add('active')
     //aggiungere la class active al nuovo elemento dell'array items e la vado a rimuovere da quello precedente
     //stessa cosa per i cerchi
 });
