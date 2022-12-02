@@ -91,4 +91,4 @@ prev.addEventListener('click', function(){
     
 })
 
-//CON BONUS 2
+
